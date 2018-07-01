@@ -38,12 +38,11 @@ public class Servidor extends UnicastRemoteObject implements IExemplo {
 		return Util.capturaArquivo(flw);
 	}
 
-	public String addClientIP(){
+	public void addClientIP(){
 		try{
 			this.clients.add(RemoteServer.getClientHost());
 			System.out.println("Cliente: "+RemoteServer.getClientHost()+" conectado!");
 		}catch(Exception e){
-			return null;
 		}
 	}
 
@@ -53,9 +52,9 @@ public class Servidor extends UnicastRemoteObject implements IExemplo {
 
 	public static void main(String[] args) {
 		try {
-			System.setProperty("java.rmi.server.hostname", "192.168.2.26");
+			System.setProperty("java.rmi.server.hostname", "25.79.218.143");
 			Servidor server = new Servidor();
-			String endereco = "192.168.2.26";
+			String endereco = "25.79.218.143";
 			System.out.println("Registering " + endereco + "...");
 			Naming.rebind(endereco, server);
 			System.out.println("Registrado!");

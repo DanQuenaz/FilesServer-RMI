@@ -7,5 +7,5 @@ public interface IExemplo extends Remote
 	int valor() throws RemoteException;
 	Object listaArquivos() throws RemoteException;
 	Object enviaArquivo(Integer id) throws RemoteException;
-	public void addClientIP() throws RemoteException;
+	void addClientIP() throws RemoteException;
 } 

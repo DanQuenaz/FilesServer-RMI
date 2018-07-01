@@ -20,12 +20,12 @@ public class Cliente
         }
 
 		try {
-			String endereco = "192.168.2.26";
+			String endereco = "25.79.218.143";
 			System.out.println("Localizando o objeto " + endereco);
 			server = (IExemplo) Naming.lookup(endereco);			
 			System.out.println("Objeto encontrado!");
 
-			server.addClient();
+			server.addClientIP();
 
 			int op = 1;
 			int op2 = 1;
